@@ -33,7 +33,7 @@ namespace TwoPersonProject
                 LevelPart part = newPart.GetComponent<LevelPart>();
 
                 LevelPart lastPart = _loadedParts[^1];
-                Debug.Log(lastPart.transform.position);
+                //Debug.Log(lastPart.transform.position);
                 newPart.transform.position = (Vector2)lastPart.transform.position + lastPart.rightConnection - part.leftConnection;
                 _loadedParts.Add(part);
             }

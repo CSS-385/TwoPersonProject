@@ -152,7 +152,7 @@ namespace TwoPersonProject
                     // If not on a wall, or we've been hanging for longer than
                     // wall hang time, then end wall hang
                     _hasWallHangEnded = true;
-                    _rb.gravityScale = 1;
+                    _rb.gravityScale = 1.5f;
                 }
                 else if ((!IsOnWall || !isInputPressed) && !_canStartWallHang)
                 {
@@ -161,7 +161,7 @@ namespace TwoPersonProject
                     // they were on the wall
                     _timeWallHanging += Time.realtimeSinceStartup - _lastWallHangTime;
                     _canStartWallHang = true;
-                    _rb.gravityScale = 1;
+                    _rb.gravityScale = 1.5f;
                 }
             }
 
@@ -185,7 +185,7 @@ namespace TwoPersonProject
                     _lastJumpTime = Time.realtimeSinceStartup;
 
                     // Stop wall hang
-                    _rb.gravityScale = 1;
+                    _rb.gravityScale = 1.5f;
                     _hasWallHangEnded = true;
                 }
                 _spaceDown = false;

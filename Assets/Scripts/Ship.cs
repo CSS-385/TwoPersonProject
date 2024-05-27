@@ -27,7 +27,7 @@ namespace TwoPersonProject
                 Mathf.Lerp(transform.position.y, target.position.y + yOffset, ySpeed)
             );
         }
-
+        
         private void OnTriggerEnter2D(Collider2D collision)
         {
             collision.attachedRigidbody.bodyType = RigidbodyType2D.Dynamic;
