@@ -14,9 +14,16 @@ namespace TwoPersonProject
         public float yOffset;
         public Transform target;
 
+        private float startTimeOffset;
+
+        private void Start()
+        {
+            startTimeOffset = Time.time;
+        }
+
         private void Update()
         {
-            float speed = Mathf.Pow((Time.time + timeOffset) * timeMult, speedPow) * speedMult;
+            float speed = Mathf.Pow((Time.time - startTimeOffset + timeOffset) * timeMult, speedPow) * speedMult;
             transform.position += speed * Time.deltaTime * Vector3.right;
         }
 
